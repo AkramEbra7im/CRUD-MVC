@@ -1,0 +1,13 @@
+﻿@model UserViewModel
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Are You Sure Delete @Model.FirstName @Model.LastName </h1>
+
+<partial name="partialviews\deletedeatailspartialviews" />
+
+<br />
+<a asp-action="ConfirmDelete" asp-route-id="@Model.Id" class="btn btn-danger ms-2">Delete</a>
+<a asp-action="@nameof(Index)" class="btn btn-light ms-2">Back To List</a>
+</html>

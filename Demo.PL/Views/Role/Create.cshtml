@@ -1,12 +1,14 @@
-﻿@model EmployeeViewModel
+﻿@model RoleViewModel
 @{
     ViewData["Title"] = "Create";
 }
 
-<h1>Create New Role</h1>
+
+
+<h1>Add New Role</h1>
 <br />
 <form asp-action="Create" enctype="multipart/form-data">
-    <partial name="partialviews\createeditpartialview" />
+    <partial name="PartialViews/CreateEditPartialView" />
     <br />
     <input type="submit" value="Submit" class="btn btn-primary" />
     <a asp-action="@nameof(Index)" class="btn btn-light ms-2">Back To List</a>
@@ -14,4 +16,3 @@
 @section ValidationScriptSection {
     <partial name="_ValidationScriptsPartial" />
 }
-

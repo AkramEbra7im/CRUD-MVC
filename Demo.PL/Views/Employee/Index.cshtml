@@ -58,7 +58,7 @@
                     <td>@employee.PhoneNumber</td>
                     <td>@Html.DisplayFor(E => employee.IsActive)</td>
                     <td>@employee.HireDate</td>
-                   <partial name="_ButtonsPartialView" model="employee.Id"/>
+                   <partial name="_ButtonsPartialView" model="employee.Id.ToString()"/>
                 </tr>
             }
             

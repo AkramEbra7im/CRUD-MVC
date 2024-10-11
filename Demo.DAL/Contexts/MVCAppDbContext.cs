@@ -20,12 +20,12 @@ namespace Demo.DAL.Contexts
         //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         // =>    optionsBuilder.UseSqlServer("server = .; database = MVCAppDb; Trusted_Connection = True");
 
-        protected override void OnModelCreating(ModelBuilder builder)
-        {
-            builder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
-            base.OnModelCreating(builder);
+        //protected override void OnModelCreating(ModelBuilder builder)
+        //{
+        //    builder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
+        //    base.OnModelCreating(builder);
 
-        }
+        //}
 
         public DbSet<Department> Departments { get; set; }
         public DbSet<Employee> Employees { get; set; }

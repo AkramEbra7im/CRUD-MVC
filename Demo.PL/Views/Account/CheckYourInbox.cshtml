@@ -1,0 +1,25 @@
+﻿
+@{
+    ViewData["Title"] = "CheckYourInbox";
+    Layout = "~/Views/Shared/_AuthLayout.cshtml";
+}
+
+
+
+
+<div class="main-agileinfo">
+	<div class="agileits-top">
+		<div>
+			Reset Password Link Has Been Sent To your Email, Please Check Your Inbox
+		</div>
+		<div>
+			<a href="https://mail.google.com/" target="_blank">Your Inbox</a>
+		</div>
+	</div>
+</div>
+
+<div class=" text-danger" asp-validation-summary="All"></div>
+@section VaildationScriptSection
+{
+	<partial name="_ValidationScriptsPartial" />
+}

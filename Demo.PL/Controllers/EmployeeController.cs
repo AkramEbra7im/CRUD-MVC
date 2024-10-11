@@ -4,11 +4,13 @@ using Demo.BLL.Repositories;
 using Demo.DAL.Models;
 using Demo.PL.Helpers;
 using Demo.PL.ViewModels;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Demo.PL.Controllers
 {
-    public class EmployeeController : Controller
+	[Authorize]
+	public class EmployeeController : Controller
     {
         private readonly IUnitOfWork _unitOfWork;
         private readonly IMapper _mapper;
@@ -25,7 +27,6 @@ namespace Demo.PL.Controllers
             if (SearchValue == null)
             {
                 employess = await _unitOfWork.EmployeeRepository.GetAllAsync();
-                
             }
             else
             {
